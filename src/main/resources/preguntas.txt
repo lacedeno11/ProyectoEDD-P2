@@ -1,0 +1,20 @@
+¿Es un mamífero?
+¿Es carnívoro?
+¿Se para en cuatro patas?
+¿Vive en el agua?
+¿Es doméstico?
+¿Tiene plumas?
+¿Puede volar?
+¿Tiene escamas?
+¿Es venenoso?
+¿Es un insecto?
+¿Tiene más de cuatro patas?
+¿Es herbívoro?
+¿Tiene una cola larga?
+¿Es nocturno?
+¿Vive en la selva?
+¿Es pequeño?
+¿Es un roedor?
+¿Tiene rayas?
+¿Es de color gris?
+¿Es un depredador?
