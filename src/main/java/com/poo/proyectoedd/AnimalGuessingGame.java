@@ -19,6 +19,7 @@ public class AnimalGuessingGame {
         this.tree = tree;
     }
 
+     
     public void play() {
         Scanner scanner = new Scanner(System.in);
 
@@ -45,21 +46,20 @@ public class AnimalGuessingGame {
         if (currentNode != null && currentNode.isLeaf()) {
             System.out.println("¿Es " + currentNode.getQuestion() + "?");
             String answer = scanner.nextLine().trim().toLowerCase();
-            if (answer.equals("sí")) {
+            if (answer.compareTo("sí") == 0) {
                 System.out.println("¡Adiviné el animal!");
             } else {
                 System.out.println("No pude adivinar el animal.");
             }
-        } else {
-            List<String> possibleAnswers = currentNode != null 
-    ? collectPossibleAnswers(currentNode).stream()
-          .filter(answer -> !answer.equals("¿Es un depredador?"))
-          .collect(Collectors.toList()) 
-    : new ArrayList<>();
-            System.out.println("No pude adivinar el animal. Las posibles respuestas son: " + possibleAnswers);
-        }
+         } else {
+                List<String> possibleAnswers = currentNode != null 
+                    ? collectPossibleAnswers(currentNode).stream()
+                          .filter(answer -> answer.compareTo("¿Es un depredador?") != 0)
+                          .collect(Collectors.toList()) 
+                    : new ArrayList<>();
+                System.out.println("No pude adivinar el animal. Las posibles respuestas son: " + possibleAnswers);
+       }
     }
-
     private List<String> collectPossibleAnswers(NodeBinaryTree<String> node) {
         List<String> answers = new ArrayList<>();
         if (node != null) {

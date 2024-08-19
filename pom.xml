@@ -42,4 +42,12 @@
             </plugin>
         </plugins>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>23-ea+22</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
 </project>
